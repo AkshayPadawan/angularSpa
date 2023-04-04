@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularSpa": {
+    "angular-spa": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/angularSpa",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
@@ -36,7 +36,7 @@
             "scripts": [],
             "customWebpackConfig": {
               "path": "extra-webpack.config.js",
-              "libraryName": "angularSpa",
+              "libraryName": "angular-spa",
               "libraryTarget": "umd"
             }
           },
@@ -73,18 +73,18 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "angularSpa:build"
+            "browserTarget": "angular-spa:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angularSpa:build:production"
+              "browserTarget": "angular-spa:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularSpa:build"
+            "browserTarget": "angular-spa:build"
           }
         },
         "test": {
@@ -121,16 +121,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angularSpa:serve"
+            "devServerTarget": "angular-spa:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angularSpa:serve:production"
+              "devServerTarget": "angular-spa:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angularSpa"
+  "defaultProject": "angular-spa"
 }

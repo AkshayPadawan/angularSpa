@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:single-spa:angularSpa": "ng build angularSpa --prod --deploy-url http://localhost:9200/",
-    "serve:single-spa:angularSpa": "ng s --project angularSpa --disable-host-check --port 9200 --deploy-url http://localhost:9200/ --live-reload false"
+    "build:single-spa:angular-spa": "ng build angular-spa --prod --deploy-url http://localhost:9200/",
+    "serve:single-spa:angular-spa": "ng s --project angular-spa --disable-host-check --port 9200 --deploy-url http://localhost:9200/ --live-reload false"
   },
   "private": true,
   "dependencies": {
